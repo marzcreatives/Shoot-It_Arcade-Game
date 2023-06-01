@@ -9,7 +9,7 @@ The game comes with three different playing modes: freeplay, accuracy and countd
 
 Freeplay mode is a point based game, where you shoot all the targets within as little time as you can.
 
-https://user-images.githubusercontent.com/116493523/226600861-1949327a-31fd-4b58-9ba0-9e7d85721ee8.mov
+https://github.com/marzcreatives/Shoot-It_Arcade-Game/assets/116493523/bcd6f36c-f450-4be2-9486-ff505e98ae71
 
 Accuracy mode comes with a limited number of pellets to shoot with and ends once those are over.
 
