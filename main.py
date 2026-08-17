@@ -199,10 +199,12 @@ async def main():
 
         for i in range(len(coords)):
             for j in range(len(coords[i])):
-                target_rects[i].append(
-                    pygame.rect.Rect((coords[i][j][0] + 10, coords[i][j][1]), (70 - i * 12, 70 - i * 12))
+                img = target_images[level - 1][i]
+                rect = img.get_rect(
+                    topleft=(coords[i][j][0], coords[i][j][1])
                 )
-                screen.blit(target_images[level - 1][i], coords[i][j])
+                target_rects[i].append(rect)
+                screen.blit(img, coords[i][j])
         return target_rects
 
     def check_shot(target_rects, coords):
@@ -211,6 +213,7 @@ async def main():
 
         for i in range(len(target_rects)):
             hit_index = None 
+
             for j in range(len(target_rects[i])): 
                 if target_rects[i][j].collidepoint(mouse_pos): 
                     hit_index = j 
@@ -219,13 +222,13 @@ async def main():
             if hit_index is not None: 
                 coords[i].pop(hit_index) 
                 points += 10 + 10 * (i ** 2) 
-            if level == 1: 
-                balloon_sound.play() 
-            elif level == 2: 
-                cup_sound.play() 
-            elif level == 3: 
-                duck_sound.play() 
-            break 
+                if level == 1: 
+                    balloon_sound.play() 
+                elif level == 2: 
+                    cup_sound.play() 
+                elif level == 3: 
+                    duck_sound.play() 
+                break 
         return coords
 
     def draw_menu():
