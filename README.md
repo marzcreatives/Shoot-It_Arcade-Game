@@ -2,7 +2,7 @@
 
 ![Preview3](https://user-images.githubusercontent.com/116493523/226599856-9fb603b2-f09a-4490-a51b-45f96a226a69.png)
 
-This is an arcade shooting game made in python suing pygame.
+This is an arcade shooting game made in python using pygame.
 All assets are within the folder, including the different types of ducks, cups and balloons.
 
 The game comes with three different playing modes: freeplay, accuracy and countdown. 
