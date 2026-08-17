@@ -61,6 +61,7 @@ async def main():
     WIDTH = 900
     HEIGHT = 800
     screen = pygame.display.set_mode([WIDTH, HEIGHT])
+    pygame.display.set_caption("Shoot It by MarzCreatives")
 
     bgs = []
     banners = []

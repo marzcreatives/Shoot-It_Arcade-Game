@@ -24,6 +24,7 @@ cd Shoot-It_Arcade-Game
 Install dependencies:
 
 ```bash
+source venv/bin/activate
 pip install pygame
 ```
 
