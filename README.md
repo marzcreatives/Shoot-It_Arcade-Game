@@ -32,20 +32,20 @@ pip install pygame
 From the project root directory:
 
 ```bash
-python main.py
+python shootit.py
 ```
 
 On some systems you may need:
 
 ```bash
-python3 main.py
+python3 shootit.py
 ```
 
 ### Project Structure
 
 ```text
 Shoot-It_Arcade-Game/
-├── main.py
+├── shootit.py
 ├── high_scores.txt
 ├── assets/
 │ ├── bgs/
@@ -57,7 +57,7 @@ Shoot-It_Arcade-Game/
 │ └── targets/
 ```
 
-> The game loads assets using relative paths, so ensure you run `main.py` from the root directory.
+> The game loads assets using relative paths, so ensure you run `shootit.py` from the root directory.
 
 ---
 

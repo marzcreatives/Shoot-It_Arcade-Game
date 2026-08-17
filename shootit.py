@@ -4,8 +4,8 @@ import math
 pygame.init()
 fps = 60
 timer = pygame.time.Clock()
-font = pygame.font.Font('assets/font/myFont.ttf', 32)
-big_font = pygame.font.Font('assets/font/myFont.ttf', 60)
+font = pygame.font.Font('assets/font/my_font.ttf', 32)
+big_font = pygame.font.Font('assets/font/my_font.ttf', 60)
 WIDTH = 900
 HEIGHT = 800
 screen = pygame.display.set_mode([WIDTH, HEIGHT])
@@ -38,9 +38,9 @@ new_coords = True
 one_coords = [[], [], []]
 two_coords = [[], [], []]
 three_coords = [[], [], [], []]
-menu_img = pygame.image.load(f'assets/menus/mainMenu.PNG')
-game_over_img = pygame.image.load(f'assets/menus/gameOver.PNG')
-pause_img = pygame.image.load(f'assets/menus/pause.PNG')
+menu_img = pygame.image.load(f'assets/menus/main_menu.png')
+game_over_img = pygame.image.load(f'assets/menus/game_over.png')
+pause_img = pygame.image.load(f'assets/menus/pause.png')
 for i in range(1, 4):
     bgs.append(pygame.image.load(f'assets/bgs/{i}.png'))
     banners.append(pygame.image.load(f'assets/banners/{i}.png'))
@@ -60,13 +60,13 @@ best_freeplay = int(read_file[0])
 best_ammo = int(read_file[1])
 best_timed = int(read_file[2])
 pygame.mixer.init()
-pygame.mixer.music.load('assets/sounds/bg_music.mp3')
+pygame.mixer.music.load('assets/sounds/bg_music.ogg')
 pygame.mixer.music.set_volume(.3)
-balloon_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_Balloon pop.wav')
+balloon_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_balloon_pop.ogg')
 balloon_sound.set_volume(.5)
-cup_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_Broken plates.wav')
+cup_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_broken_plates.ogg')
 cup_sound.set_volume(.5)
-duck_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_Drill Gear.mp3')
+duck_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_drill_gear.ogg')
 duck_sound.set_volume(.5)
 pygame.mixer.music.play()
 
