@@ -56,8 +56,8 @@ async def main():
 
     fps = 60
     timer = pygame.time.Clock()
-    font = pygame.font.Font('assets/font/myFont.ttf', 32)
-    big_font = pygame.font.Font('assets/font/myFont.ttf', 60)
+    font = pygame.font.Font('assets/font/my_font.ttf', 32)
+    big_font = pygame.font.Font('assets/font/my_font.ttf', 60)
     WIDTH = 900
     HEIGHT = 800
     screen = pygame.display.set_mode([WIDTH, HEIGHT])
@@ -92,9 +92,9 @@ async def main():
     best_ammo = high_scores['best_ammo']
     best_timed = high_scores['best_timed']
 
-    menu_img = pygame.image.load('assets/menus/main_menu.PNG')
-    game_over_img = pygame.image.load('assets/menus/game_over.PNG')
-    pause_img = pygame.image.load('assets/menus/pause.PNG')
+    menu_img = pygame.image.load('assets/menus/main_menu.png')
+    game_over_img = pygame.image.load('assets/menus/game_over.png')
+    pause_img = pygame.image.load('assets/menus/pause.png')
 
     for i in range(1, 4):
         bgs.append(pygame.image.load(f'assets/bgs/{i}.png'))
@@ -121,9 +121,9 @@ async def main():
     pygame.mixer.init()
     pygame.mixer.music.load('assets/sounds/bg_music.ogg')
     pygame.mixer.music.set_volume(.3)
-    balloon_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_Balloon pop.ogg')
-    cup_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_Broken plates.ogg')
-    duck_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_Drill Gear.ogg')
+    balloon_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_balloon_pop.ogg')
+    cup_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_broken_plates.ogg')
+    duck_sound = pygame.mixer.Sound('assets/sounds/assets_sounds_drill_gear.ogg')
     balloon_sound.set_volume(.5)
     cup_sound.set_volume(.5)
     duck_sound.set_volume(.5)
@@ -225,7 +225,6 @@ async def main():
                 cup_sound.play() 
             elif level == 3: 
                 duck_sound.play() 
-                
             break 
         return coords
 
