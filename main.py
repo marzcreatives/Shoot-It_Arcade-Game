@@ -10,6 +10,10 @@ try:
 except ImportError:
     localStorage = None
 
+try:
+    from js import window
+except ImportError:
+    window = None
 
 def load_high_scores():
     default_scores = {'best_freeplay': 0, 'best_ammo': 0, 'best_timed': 0}
@@ -317,6 +321,8 @@ async def main():
             time_remaining = 0
 
         if exit_button.collidepoint(mouse_pos) and clicks[0] and not clicked:
+            if window:
+                window.location.href = "https://marzcreatives.com"
             run = False
 
     def draw_pause():
